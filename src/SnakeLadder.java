@@ -17,10 +17,9 @@ public class SnakeLadder {
                     System.out.println("Player is not playing therefore stays in the same position");
                     break;
                 case LADDER:
+                    if (firstPlayerPosition + numberAfterRolling > 100)
+                        break;
                     firstPlayerPosition += numberAfterRolling;
-                    if (firstPlayerPosition>WINNING_POSITION){
-                        firstPlayerPosition=WINNING_POSITION;
-                    }
                     System.out.println("Player got the ladder then position is: " + firstPlayerPosition);
                     break;
                 case SNAKE:
